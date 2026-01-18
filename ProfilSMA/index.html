@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SMA Negeri 1 Soe</title>
+  <style>
+    :root{
+      --primary:#0b3c5d;
+      --secondary:#1d6fa5;
+      --accent:#f5b700;
+      --light:#f9fbfd;
+      --dark:#1a1a1a;
+    }
+    *{margin:0;padding:0;box-sizing:border-box;font-family:Segoe UI,Arial,sans-serif}
+    body{background:var(--light);color:var(--dark);line-height:1.6}
+
+    header{
+      background:linear-gradient(135deg,var(--primary),var(--secondary));
+      color:#fff;padding:30px 20px;text-align:center
+    }
+    header img{width:90px;margin-bottom:10px}
+    header h1{font-size:2.4rem}
+
+    nav{background:#fff;box-shadow:0 2px 10px rgba(0,0,0,.08);position:sticky;top:0;z-index:10}
+    nav ul{display:flex;justify-content:center;flex-wrap:wrap;list-style:none}
+    nav a{padding:15px 20px;display:block;color:var(--primary);text-decoration:none;font-weight:600;position:relative}
+    nav a::after{content:"";position:absolute;left:20px;bottom:8px;width:0;height:2px;background:var(--accent);transition:.3s}
+    nav a:hover::after{width:60%}
+
+    section{padding:60px 20px;max-width:1100px;margin:auto}
+    section h2{text-align:center;margin-bottom:30px;color:var(--primary)}
+
+    .slider{position:relative;height:420px;overflow:hidden;border-radius:20px}
+    .slides{display:flex;width:300%;height:100%;animation:slide 15s infinite}
+    .slides img{width:100%;object-fit:cover}
+    @keyframes slide{
+      0%{transform:translateX(0)}
+      33%{transform:translateX(-100%)}
+      66%{transform:translateX(-200%)}
+      100%{transform:translateX(0)}
+    }
+
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+    .card{background:#fff;border-radius:15px;padding:25px;box-shadow:0 10px 30px rgba(0,0,0,.08)}
+
+    .gallery img{width:100%;border-radius:15px;box-shadow:0 6px 20px rgba(0,0,0,.1)}
+
+    footer{background:var(--primary);color:#fff;text-align:center;padding:30px 20px;margin-top:60px}
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="img/logo.png" alt="Logo Sekolah">
+  <h1>SMA Negeri 1 Soe</h1>
+  <p>Unggul dalam Prestasi dan Karakter</p>
+</header>
+
+<nav>
+  <ul>
+    <li><a href="#beranda">Beranda</a></li>
+    <li><a href="#profil">Profil</a></li>
+    <li><a href="#galeri">Galeri</a></li>
+    <li><a href="#berita">Berita</a></li>
+    <li><a href="#kontak">Kontak</a></li>
+  </ul>
+</nav>
+
+<section id="beranda">
+  <div class="slider">
+    <div class="slides">
+      <img src="img/slide1.jpeg" alt="slider">
+      <img src="img/slide2.jpeg" alt="slider">
+      <img src="img/slide3.jpeg" alt="slider">
+      <img src="img/slide4.jpeg" alt="slider">
+      <img src="img/slide5.jpeg" alt="slider">
+      <img src="img/slide6.jpeg" alt="slider">
+
+      
+    </div>
+  </div>
+</section>
+
+<section id="profil">
+  <h2>Profil Sekolah</h2>
+  <div class="grid">
+    <div class="card"><h3>Sejarah</h3><p>SMA Negeri 1 Soe merupakan sekolah unggulan di Kabupaten Timor Tengah Selatan.</p></div>
+    <div class="card"><h3>Visi</h3><p>Membentuk peserta didik berprestasi, berkarakter, dan berdaya saing.</p></div>
+    <div class="card"><h3>Misi</h3><p>Meningkatkan mutu pendidikan dan pembinaan karakter.</p></div>
+  </div>
+</section>
+
+<section id="galeri">
+  <h2>Galeri Sekolah</h2>
+  <div class="grid gallery">
+    <img src="img/galeri1.jpeg" alt="Galeri">
+    <img src="img/galeri2.jpeg" alt="Galeri">
+    <img src="img/galeri3.jpeg" alt="Galeri">
+    <img src="img/galeri4.jpeg" alt="Galeri">
+    <img src="img/galeri5.jpeg" alt="Galeri">
+    <img src="img/galeri6.jpeg" alt="Galeri">
+    
+  </div>
+</section>
+
+<section id="berita">
+  <h2>Berita Terbaru</h2>
+  <div class="grid">
+    <div class="card"><h3>Prestasi Siswa</h3><p>Siswa SMA Negeri 1 Soe meraih juara tingkat kabupaten.</p></div>
+    <div class="card"><h3>Kegiatan Sekolah</h3><p>Pelaksanaan kegiatan literasi dan penguatan karakter.</p></div>
+    <div class="card"><h3>Pengumuman</h3><p>Penerimaan peserta didik baru tahun ajaran terbaru.</p></div>
+  </div>
+</section>
+
+<section id="kontak">
+  <h2>Kontak</h2>
+  <div class="card" style="max-width:600px;margin:auto">
+    <p><strong>Alamat:</strong> Soe, Timor Tengah Selatan, NTT</p>
+    <p><strong>Email:</strong> sman1soe@sch.id</p>
+    <p><strong>Telepon:</strong> (000) 000000</p>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2026 SMA Negeri 1 Soe</p>
+</footer>
+
+</body>
+</html>
